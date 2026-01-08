@@ -1,4 +1,4 @@
-package org.example.chapter_02_overview;
+package org.example.chapter_02_overview_iterating;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package org.example.chapter_02_overview;
+package org.example.chapter_02_overview_iterating;
 
 import java.time.Month;
 import java.util.List;
@@ -37,4 +37,25 @@ public class BankStatementProcessor {
         }
         return total;
     }
+
+    public double calculateMaxInMonth(final Month month){
+        double max = Double.NEGATIVE_INFINITY;
+        for(final BankTransaction bankTransaction : bankTransactions){
+            if(bankTransaction.getDate().getMonth() == month){
+                max = Math.max(max, bankTransaction.getAmount());
+            }
+        }
+        return max;
+    }
+
+    public double calculateMinInMonth(final Month month){
+        double min = Double.POSITIVE_INFINITY;
+        for(final BankTransaction bankTransaction : bankTransactions){
+            if(bankTransaction.getDate().getMonth() == month){
+                min = Math.min(min, bankTransaction.getAmount());
+            }
+        }
+        return min;
+    }
+
 }

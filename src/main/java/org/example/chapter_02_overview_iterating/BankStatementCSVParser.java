@@ -1,11 +1,11 @@
-package org.example.chapter_02_overview;
+package org.example.chapter_02_overview_iterating;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BankStatementCSVParser implements BankStatementParser{
+public class BankStatementCSVParser implements BankStatementParser {
     private static final DateTimeFormatter DATA_PATTERN = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
     private BankTransaction parseFromCSV(final String line){

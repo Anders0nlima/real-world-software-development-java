@@ -1,4 +1,5 @@
-package org.example.chapter_02_overview;
+package org.example.chapter_02_overview_iterating;
+
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -27,7 +28,11 @@ public class BankStatementAnalyzer {
     private static void collectSummary(final BankStatementProcessor bankStatementProcessor){
         System.out.println("The total for all transactions is " + bankStatementProcessor.calculateTotalAmount());
         System.out.println("The total for transactions is january is " + bankStatementProcessor.calculateTotalInMonth(Month.JANUARY));
-        System.out.println("The total for transactions is fabruary is " + bankStatementProcessor.calculateTotalInMonth(Month.FEBRUARY));
+        System.out.println("The total for transactions is Fabruary is " + bankStatementProcessor.calculateTotalInMonth(Month.FEBRUARY));
         System.out.println("The total salary received is " + bankStatementProcessor.calculateTotalForCategory("Salary"));
+        System.out.println("the maximum value in January is " + bankStatementProcessor.calculateMaxInMonth(Month.JANUARY));
+        System.out.println("the minimum value in January is " + bankStatementProcessor.calculateMinInMonth(Month.JANUARY));
+        System.out.println("the maximum value in Fabruary is " + bankStatementProcessor.calculateMaxInMonth(Month.FEBRUARY));
+        System.out.println("the minimum value in Fabruary is " + bankStatementProcessor.calculateMinInMonth(Month.FEBRUARY));
     }
 }
